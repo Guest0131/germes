@@ -9,6 +9,10 @@ import morgan from 'morgan';
 import path from 'path';
 import { fileURLToPath } from 'url';
 
+import { register } from './controllers/auth';
+import { authRouter } from './routes/auth';
+
+
 // Configuration
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
@@ -46,9 +50,11 @@ const upload = multer({ storage });
 
 
 // Routes
+app.use('/auth', authRouter);
 
 
-
+// Routes with files
+app.use('/register', authRouter);
 
 // Start server and connect to DB
 async function start () {
