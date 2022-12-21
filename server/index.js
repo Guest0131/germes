@@ -1,11 +1,18 @@
 import express from  'express';
+import bodyParser from 'body-parser';
 import mongoose from 'mongoose';
 import dotenv from 'dotenv';
 import cors from 'cors';
+import multer from 'multer';
+import helmet from 'helmet';
+import morgan from 'morgan';
+import path from 'path';
+import { fileURLToPath } from 'url';
 
-const app = express();
+// Configuration
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 dotenv.config();
-mongoose.set('strictQuery', true);
 
 // Constants
 const APP_PORT = process.env.APP_PORT || 3002;
@@ -16,16 +23,34 @@ const DB_NAME = process.env.DB_NAME;
 const DB_PORT = process.env.DB_PORT;
 
 // Middleware
-app.use(cors());
+const app = express();
+mongoose.set('strictQuery', true);
 app.use(express.json());
+app.use(helmet()); 
+app.use(morgan("common"));
+app.use(bodyParser.json({limit: "30mb", extended: true }));
+app.use(bodyParser.urlencoded({ limit: "30mb", extended: true }));
+app.use(cors());
+app.use("/assets", express.static(path.join(__dirname, 'public/assets')));
 
-app.get('/', (req, res) => {
-    res.json({
-        message: 'All is fine'
-    })
+// File Storage
+const storage = multer.diskStorage({
+    destination: (req, file, cb) => {
+        cb(null, 'public/assets');
+    },
+    filename: (req, file, cb) => {
+        cb(null, file.originalname);
+    }
 });
+const upload = multer({ storage });
 
 
+// Routes
+
+
+
+
+// Start server and connect to DB
 async function start () {
     try {
         await mongoose.connect(
