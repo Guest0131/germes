@@ -54,7 +54,7 @@ app.use('/auth', authRouter);
 
 
 // Routes with files
-app.use('/register', authRouter);
+app.use('/register', upload.single("user_avatars"), register);
 
 // Start server and connect to DB
 async function start () {
