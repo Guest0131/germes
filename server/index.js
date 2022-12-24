@@ -10,7 +10,11 @@ import path from 'path';
 import { fileURLToPath } from 'url';
 
 import { register } from './controllers/auth';
-import { authRouter } from './routes/auth';
+
+import { authRoute } from './routes/auth';
+import { postsRoute } from './routes/posts';
+
+import { verifyToken } from './middleware/auth';
 
 
 // Configuration
@@ -50,11 +54,10 @@ const upload = multer({ storage });
 
 
 // Routes
-app.use('/auth', authRouter);
+app.use('/api/auth',  authRoute);
+app.use('/posts', postRoute)
 
 
-// Routes with files
-app.use('/register', upload.single("user_avatars"), register);
 
 // Start server and connect to DB
 async function start () {
