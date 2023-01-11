@@ -7,14 +7,15 @@ import multer from 'multer';
 import helmet from 'helmet';
 import morgan from 'morgan';
 import path from 'path';
+
 import { fileURLToPath } from 'url';
 
-import { register } from './controllers/auth';
+import { register } from './controllers/auth.js';
 
-import { authRoute } from './routes/auth';
-import { postsRoute } from './routes/posts';
+import authRoute from './routes/auth.js';
+import postsRoute from './routes/posts.js';
 
-import { verifyToken } from './middleware/auth';
+import { verifyToken } from './middleware/auth.js';
 
 
 // Configuration
@@ -55,7 +56,7 @@ const upload = multer({ storage });
 
 // Routes
 app.use('/api/auth',  authRoute);
-app.use('/posts', postRoute)
+app.use('/posts', postsRoute)
 
 
 
@@ -64,7 +65,9 @@ async function start () {
     try {
         await mongoose.connect(
             `mongodb://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:${DB_PORT}/${DB_NAME}`,
-            { useNewUrlParser: true }
+            { 
+                useNewUrlParser: true
+             }
             );
 
         app.listen(APP_PORT, () => console.log(`Server started on port: ${APP_PORT}`))

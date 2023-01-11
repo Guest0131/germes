@@ -1,6 +1,6 @@
 import { Router } from 'express';
-import {  } from '../controllers/user';
+import {  } from '../controllers/user.js';
 
-const router = Router();
+const postsRoute = Router();
 
-export default router;
+export default postsRoute;

@@ -1,5 +1,5 @@
-import User from '../models/User';
-import Post from '../models/Post';
+import User from '../models/User.js';
+import Post from '../models/Post.js';
 
 // READ
 export const getUser = async (req, res) => { 
