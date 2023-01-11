@@ -1,0 +1,28 @@
+.module-border-wrap {
+    max-width: 250px;
+    padding: 1rem;
+    position: relative;
+    background: linear-gradient(to right, red, purple);
+    padding: 3px;
+  }
+  
+  .module {
+    background: #222;
+    color: white;
+    padding: 2rem;
+  }
+  #my-chart.column {
+    height: 200px;
+    max-width: 300px;
+  }
+  #my-label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    position: relative;
+  }
+  .vh {
+    height: 100vh;
+  }
+.center-block {
+    margin-bottom: 50%;  
+}
