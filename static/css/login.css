@@ -32,3 +32,29 @@ form > section > div > p {
     
     
 }
+
+#bg {
+    background-color: rgb(50, 52, 67);
+}
+
+#btn-sign-up {
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);
+    margin: 10px;
+    width: 100px;
+    
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.233);
+    border-radius: 10px;
+    display: block;
+}
+
+#btn-sign-up:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+
+    
+    
+}
