@@ -1,11 +1,10 @@
+
 .module-border-wrap {
-    max-width: 250px;
-    padding: 1rem;
-    position: relative;
-    background: linear-gradient(to right, red, purple);
-    padding: 3px;
+    border: 5px solid;
+    border-image: repeating-linear-gradient(to left, #743ad5, #d53a9d) 1;
+    
+
   }
-  
   .module {
     background: #222;
     color: white;
