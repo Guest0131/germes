@@ -1,62 +1,77 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Регистрация</title>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hello Bulma!</title>
 
-    <link
-      rel="stylesheet"
-      href="../package/bulma/node_modules/bulma/css/bulma.min.css"
-    />
-    <link rel="stylesheet" href="../static/css/gradient.css">
-  </head>
-  <body>
-    <div class="container-max-width">
-      <div class="notification is-primary vh " styles="height: 100%;">
-        <div class="columns">
-          <div
-            class="column is-one-quarter vh"
-            style="background-color: rgb(26, 26, 26)"
-          >
-            <h3 class="title is-3">Гермес</h3>
-          </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Страница авторизации</title>
+  <link rel="stylesheet" href="../static/frameworks/fontawesome/css/all.min.css">
+  <link rel="stylesheet" href="../static/css/bulma.css">
+  <link rel="stylesheet" href="../static/css/login.css">
+</head>
 
-          <div class="column vh" style="background-color: rgb(50, 52, 67)">
-            <h3 class="title is-3"></h3>
-            <h3 class="title is-3">Авторизируйся</h3>
-            <form class="box center-block module-border-wrap">
+<body>
+  <section class="hero is-primary is-fullheight">
+    <div class="hero-body">
+      <div class="container">
+        <div class="columns is-centered">
+          <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+
+            <!--Form [START]-->
+            <form action="" class="box">
+              <section class="hero">
+                <div class="hero-body">
+                  <p class="title">
+                    Authorize
+                  </p>
+              </section>
+              <!--Login field [START]-->
               <div class="field">
-                <label class="label">Логин</label>
-                <div class="control">
-                  <input
-                    class="input"
-                    type="email"
-                    placeholder="e.g. alex@example.com"
-                  />
+                <div class="control has-icons-left">
+                  <input type="login" placeholder="Press login" class="input" required>
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-user"></i>
+                  </span>
                 </div>
               </div>
+              <!--Login field [END]-->
 
+              <!--Password field [START]-->
               <div class="field">
-                <label class="label">Пароль</label>
-                <div class="control">
-                  <input class="input" type="password" placeholder="********" />
+                <div class="control has-icons-left">
+                  <input type="password" placeholder="Qwerty100" class="input" required>
+                  <span class="icon is-small is-left">
+                    <i class="fa fa-lock"></i>
+                  </span>
                 </div>
               </div>
+              <!--Password field [END]-->
 
-              <button class="button is-primary">Войти</button>
+              <!--Checkbox [START]-->
+              <div class="field">
+                <label for="" class="checkbox">
+                  <input type="checkbox">
+                  Remember me
+                </label>
+              </div>
+              <!--Checkbox [END]-->
+
+              <!--Button Login [START]-->
+              <div class="field">
+                <button class="button is-dark" id="btn-login">
+                  Login
+                </button>
+              </div>
+              <!--Button Login [END]-->
+
             </form>
+            <!--Form [END]-->
           </div>
-          <div
-            class="column is-one-quarter vh"
-            style="background-color: rgb(26, 26, 26)"
-          ></div>
         </div>
       </div>
     </div>
-  </body>
+  </section>
+</body>
+
 </html>
