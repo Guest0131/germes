@@ -56,7 +56,7 @@ const upload = multer({ storage });
 
 // Routes
 app.use('/api/auth',  authRoute);
-app.use('/posts', postsRoute)
+app.use('/api/posts', postsRoute);
 
 
 
