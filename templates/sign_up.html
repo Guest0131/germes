@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Страница регистрации</title>
+    <link
+      rel="stylesheet"
+      href="../static/frameworks/fontawesome/css/all.min.css"
+    />
+    <link rel="stylesheet" href="../static/css/bulma.css" />
+    <link rel="stylesheet" href="../static/css/login.css" />
+  </head>
+
+  <body>
+    <section class="hero is-primary is-fullheight">
+      <!--Header [START]-->
+      <nav
+        class="navbar"
+        id="bg"
+        role="navigation"
+        aria-label="main navigation"
+      >
+        <div class="navbar-brand">
+          <a class="navbar-item" href="">
+            <img
+              src="../static/images/hermes-black.png"
+              width="112"
+              height="28"
+            />
+          </a>
+
+          <a
+            role="button"
+            class="navbar-burger"
+            aria-label="menu"
+            aria-expanded="false"
+            data-target="navbarBasicExample"
+          >
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+            <span aria-hidden="true"></span>
+          </a>
+        </div>
+
+        <!--Menu [START]-->
+        <div id="navbarBasicExample" class="navbar-menu">
+          <div class="navbar-start">
+            <a class="navbar-item"> Home </a>
+
+            <a class="navbar-item"> About </a>
+          </div>
+          <!--Menu [END]-->
+
+          <!--Button sign [START]-->
+          <div class="navbar-end">
+            <div class="navbar-item">
+              <div class="buttons">
+                <a class="button is-primary" id="btn-sign-up" href="login.html">
+                  <strong>Sign up</strong>
+                </a>
+                <a class="button is-light" id="btn-sign-up" href="auto.html">
+                  Log in
+                </a>
+              </div>
+            </div>
+          </div>
+          <!--Button sign [END]-->
+        </div>
+      </nav>
+      <!--Header [END]-->
+      <div class="hero-body">
+        <div class="container">
+          <div class="columns is-centered">
+            <div class="column is-5-tablet is-4-desktop is-3-widescreen">
+              <!--Form [START]-->
+              <form action="" class="box">
+                <!--LOGO field [START]-->
+                <div class="field has-text-centered">
+                  <img src="../static/images/hermes.png" width="167" />
+                </div>
+                <!--LOGO field [START]-->
+
+                <div class="field">
+                  <label class="label">Surname</label>
+                  <div class="control has-icons-left">
+                    <input
+                      type="surname"
+                      placeholder="Press Surname"
+                      class="input"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+                <!--Surname field [END]-->
+
+                <!--Name field [START]-->
+                <div class="field">
+                  <label class="label">Name</label>
+                  <div class="control has-icons-left">
+                    <input
+                      type="name"
+                      placeholder="Press Name"
+                      class="input"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-user"></i>
+                    </span>
+                  </div>
+                </div>
+                <!--Name field [END]-->
+
+                <!--Email field [START]-->
+                <div class="field">
+                  <label class="label">Email</label>
+                  <div class="control has-icons-left">
+                    <input
+                      class="input"
+                      type="email"
+                      placeholder="Email input"
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fas fa-envelope"></i>
+                    </span>
+                  </div>
+                </div>
+                <!--Email field [END]-->
+
+                <!--Password field [START]-->
+                <div class="field">
+                  <label class="label">Password</label>
+                  <div class="control has-icons-left">
+                    <input
+                      type="password"
+                      placeholder="Password"
+                      class="input"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+                <!--Password field [END]-->
+
+                <!--Password again field [START]-->
+                <div class="field">
+                  <label class="label">Password again</label>
+                  <div class="control has-icons-left">
+                    <input
+                      type="password"
+                      placeholder="Password again"
+                      class="input"
+                      required
+                    />
+                    <span class="icon is-small is-left">
+                      <i class="fa fa-lock"></i>
+                    </span>
+                  </div>
+                </div>
+                <!--Password again field [END]-->
+
+                <!--Checkbox [START]-->
+                <div class="field">
+                  <label for="" class="checkbox">
+                    <input type="checkbox" />
+                    Я соглашаюсь с условиями платформы
+                  </label>
+                </div>
+                <!--Checkbox [END]-->
+
+                <!--Button Login [START]-->
+                <div class="field">
+                  <button class="button is-dark" id="btn-login">Sign up</button>
+                </div>
+                <!--Button Login [END]-->
+              </form>
+              <!--Form [END]-->
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </body>
+</html>

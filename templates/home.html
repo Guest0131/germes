@@ -1,18 +1,16 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Hello Bulma!</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>Страница авторизации</title>
     <link
       rel="stylesheet"
-      href="../package/bulma/node_modules/bulma/css/bulma.min.css"
+      href="../static/frameworks/fontawesome/css/all.min.css"
     />
-    <link
-      rel="stylesheet"
-      href="../package/charts/charts.css-0.9.0/dist/charts.min.css"
-    />
-    <link rel="stylesheet" href="../static/css/gradient.css"
+    <link rel="stylesheet" href="../static/css/bulma.css" />
+    <link rel="stylesheet" href="../static/css/login.css" />
   </head>
   <body>
     <div class="container-max-width">
@@ -20,7 +18,7 @@
         <div class="columns">
           <div
             class="column is-one-quarter"
-            style="background-color: rgb(61, 53, 230)"
+            style="background-color: rgb(26, 26, 26)"
           >
             <h3 class="title is-3">Гермес</h3>
             <aside class="menu">
@@ -33,7 +31,7 @@
               </ul>
             </aside>
           </div>
-          <div class="column" style="background-color: rgb(85, 17, 50)">
+          <div class="column" style="background-color: rgb(50, 52, 67)">
             <h3 class="title is-3"></h3>
             <h3 class="title is-3 is-center">Рабочая доска</h3>
             
@@ -49,9 +47,11 @@
                   </p>
                 </div>
                 <div class="column">
-                  <button class="button is-link is-size-5-touch">
-                    Пройти обучение
-                  </button>
+                  <div class="buttons">
+                    <a class="button" id="btn-learn" href="login.html">
+                      <strong>Пройти обучение</strong>
+                    </a> 
+                  </div>
                 </div>
               </div>
             </div>
@@ -119,7 +119,7 @@
         </div>
           <div
             class="column is-one-quarter"
-            style="background-color: rgb(151, 15, 119)"
+            style="background-color: rgb(26, 26, 26)"
           >
             Man
           </div>
