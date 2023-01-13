@@ -1,0 +1,11 @@
+#chart-container-1 {
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+}
+
+#chart-container-2 {
+    position: relative;
+    height: 30vh;
+    overflow: hidden;
+}

@@ -1,21 +1,27 @@
 <!DOCTYPE html>
 <html>
-  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Страница авторизации</title>
+    <title>DOMINIC TORETTO</title>
     <link
       rel="stylesheet"
       href="../static/frameworks/fontawesome/css/all.min.css"
     />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/charts.css/dist/charts.min.css"
+    />
     <link rel="stylesheet" href="../static/css/bulma.css" />
     <link rel="stylesheet" href="../static/css/login.css" />
+    <link rel="stylesheet" href="../static/css/diagram.css" />
+    <link rel="stylesheet" href="../static/css/document.css" />
   </head>
   <body>
     <div class="container-max-width">
       <div class="notification is-primary">
         <div class="columns">
+          <!-- Block Menu  [Start]-->
           <div
             class="column is-one-quarter"
             style="background-color: rgb(26, 26, 26)"
@@ -31,11 +37,13 @@
               </ul>
             </aside>
           </div>
+          <!-- Block Menu  [End]-->
+
+          <!-- Block Work table  [Start]-->
           <div class="column" style="background-color: rgb(50, 52, 67)">
             <h3 class="title is-3"></h3>
             <h3 class="title is-3 is-center">Рабочая доска</h3>
-            
-            
+
             <div class="box">
               <h5 class="title is-5">Хочешь гуглить как боженька?</h5>
               <div class="columns">
@@ -50,81 +58,284 @@
                   <div class="buttons">
                     <a class="button" id="btn-learn" href="login.html">
                       <strong>Пройти обучение</strong>
-                    </a> 
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
-            
+            <!-- Block with statisics [Start]-->
             <div class="box">
-                <div class="columns">
-                    <div class="column is-three-fifths">
-                        <table class="charts-css column hide-data show-labels show-heading" id="my-chart">
-                            <h5 class="title is-5">Статистика за семестр</h5>
-                            <thead>
-                              <tr>
-                                <th scope="col"> Month </th>
-                                <th scope="col"> Progress </th>
-                              </tr>
-                            </thead>
-                            <tbody>
-                              <tr>
-                                <th scope="row"> Jan </th>
-                                <td style="--size: 0.3;"> <span class="data"> 30 </span> </td>
-                              </tr>
-                              <tr>
-                                <th scope="row"> Feb </th>
-                                <td style="--size: 0.5;"> <span class="data"> 50 </span> </td>
-                              </tr>
-                              <tr>
-                                <th scope="row"> Mar </th>
-                                <td style="--size: 0.8;"> <span class="data"> 80 </span> </td>
-                              </tr>
-                              <tr>
-                                <th scope="row"> Apr </th>
-                                <td style="--size: 1;"> <span class="data"> 100 </span> </td>
-                              </tr>
-                              <tr>
-                                <th scope="row"> May </th>
-                                <td style="--size: 0.65;"> <span class="data"> 65 </span> </td>
-                              </tr>
-                              <tr>
-                                <th scope="row"> Jun </th>
-                                <td style="--size: 0.45;"> <span class="data"> 45 </span> </td>
-                              </tr>
-                              <tr>
-                                <th scope="row"> Jul </th>
-                                <td style="--size: 0.15;"> <span class="data"> 15 </span> </td>
-                              </tr>
-                              <tr>
-                                <th scope="row"> Aug </th>
-                                <td style="--size: 0.32;"> <span class="data"> 32 </span> </td>
-                              </tr>
-                              
-                            </tbody>
-                          
-                          </table>
-                    </div>
-                    <div class="column">
+              <h5 class="title is-5">Статистика за семестр</h5>
+              <div class="columns">
+                <!-- Block with Bar [Start]-->
+                <div class="column is-two-fifths">
+                  <div id="chart-container-1"></div>
+                </div>
+                <!-- Block with Bar [End]-->
+
+                <!-- Block with Diagram [Start]-->
+                <div class="column">
+                  <div id="chart-container-2"></div>
+                </div>
+                <!-- Block with Diagram [End] -->
+              </div>
+            </div>
+            <!-- Block with statisics [End]-->
+
+            <!-- Block document [Start]-->
+            <div class="box">
+              <h5 class="title is-5">Мои документы</h5>
+              <div class="columns">
+
+                <!-- Last Left  Block  [Start]-->
+                <div class="column is-half">
+              
+                  <!-- Block theme  [Start]-->
+                  <div class="box" id="black-themes-for-box">
+                    <div class="columns">
+                      <div class="column">
                       
+                        <span class="icon is-small">
+                          <i class="fas fa-book" id="light-text" aria-hidden="true"></i>
+                        </span>
+                      
+                      </div>
+                      <div class="is-three-quarters" id="position-left">
+                          <strong id="light-text"> Как писать красивый код?</strong>
+                          <p class="subtitle light-small-text">10 просмотров</p>
+                      </div>
+                      <div class="column">
+                        <div class="buttons">
+                          <a class="button" id="btn-look" href="login.html">
+                            <strong style="font-size: 12px;">Просмотр</strong>
+                          </a>
+                        </div>
+                      </div>
                     </div>
                   </div>
+                  <!-- Block theme  [End]-->
+
+                   <!-- Block theme  [Start]-->
+                   <div class="box" id="black-themes-for-box">
+                    <div class="columns">
+                      <div class="column">
+                      
+                        <span class="icon is-small">
+                          <i class="fas fa-book" id="light-text" aria-hidden="true"></i>
+                        </span>
+                      
+                      </div>
+                      <div class="is-three-quarters" id="position-left">
+                          <strong id="light-text">Я хуй его знает, честно ...</strong>
+                          <p class="subtitle light-small-text">8 просмотров</p>
+                      </div>
+                      <div class="column">
+                        <div class="buttons">
+                          <a class="button" id="btn-look" href="login.html">
+                            <strong style="font-size: 12px;">Просмотр</strong>
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Block theme  [End]-->
+                </div>
+                <!-- Last Left Block  [End]-->
+
+                <!-- Last Right Block  [Start]-->
+                <div class="column is-half"></div>
+                <!-- Last Right Block  [End]-->
+
+              </div>
             </div>
-          
-        
-        
-        
-        
-        
-        </div>
+          </div>
+          <!-- Block document [End]-->
+
+          <!-- Block Work table  [End]-->
+
+          <!-- Block  News [START] -->
           <div
             class="column is-one-quarter"
             style="background-color: rgb(26, 26, 26)"
           >
-            Man
+            <div class="column is-half"></div>
           </div>
+          <!-- Block News [End] -->
         </div>
       </div>
     </div>
+    <script src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
+    <script>
+      var dom = document.getElementById("chart-container-2");
+      var myChart = echarts.init(dom, {
+        renderer: "canvas",
+        useDirtyRect: false,
+      });
+      var app = {};
+
+      var option;
+
+      option = {
+        tooltip: {
+          trigger: "item",
+        },
+        legend: {
+          top: "5%",
+          left: "center",
+        },
+        series: [
+          {
+            name: "Access From",
+            type: "pie",
+            radius: ["40%", "70%"],
+            avoidLabelOverlap: false,
+            label: {
+              show: false,
+              position: "center",
+            },
+            emphasis: {
+              label: {
+                show: true,
+                fontSize: 40,
+                fontWeight: "bold",
+              },
+            },
+            labelLine: {
+              show: false,
+            },
+            data: [
+              { value: 1048, name: "Search Engine" },
+              { value: 735, name: "Direct" },
+              { value: 580, name: "Email" },
+              { value: 484, name: "Union Ads" },
+              { value: 300, name: "Video Ads" },
+            ],
+          },
+        ],
+      };
+
+      if (option && typeof option === "object") {
+        myChart.setOption(option);
+      }
+
+      window.addEventListener("resize", myChart.resize);
+    </script>
+    <script>
+      var dom = document.getElementById("chart-container-1");
+      var myChart = echarts.init(dom, null, {
+        renderer: "canvas",
+        useDirtyRect: false,
+      });
+      var app = {};
+
+      var option;
+
+      option = {
+        xAxis: {
+          data: ["Animals", "Fruits", "Cars"],
+        },
+        yAxis: {},
+        dataGroupId: "",
+        animationDurationUpdate: 500,
+        series: {
+          type: "bar",
+          id: "sales",
+          data: [
+            {
+              value: 5,
+              groupId: "animals",
+            },
+            {
+              value: 2,
+              groupId: "fruits",
+            },
+            {
+              value: 4,
+              groupId: "cars",
+            },
+          ],
+          universalTransition: {
+            enabled: true,
+            divideShape: "clone",
+          },
+        },
+      };
+      const drilldownData = [
+        {
+          dataGroupId: "animals",
+          data: [
+            ["Cats", 4],
+            ["Dogs", 2],
+            ["Cows", 1],
+            ["Sheep", 2],
+            ["Pigs", 1],
+          ],
+        },
+        {
+          dataGroupId: "fruits",
+          data: [
+            ["Apples", 4],
+            ["Oranges", 2],
+          ],
+        },
+        {
+          dataGroupId: "cars",
+          data: [
+            ["Toyota", 4],
+            ["Opel", 2],
+            ["Volkswagen", 2],
+          ],
+        },
+      ];
+      myChart.on("click", function (event) {
+        if (event.data) {
+          var subData = drilldownData.find(function (data) {
+            return data.dataGroupId === event.data.groupId;
+          });
+          if (!subData) {
+            return;
+          }
+          myChart.setOption({
+            xAxis: {
+              data: subData.data.map(function (item) {
+                return item[0];
+              }),
+            },
+            series: {
+              type: "bar",
+              id: "sales",
+              dataGroupId: subData.dataGroupId,
+              data: subData.data.map(function (item) {
+                return item[1];
+              }),
+              universalTransition: {
+                enabled: true,
+                divideShape: "clone",
+              },
+            },
+            graphic: [
+              {
+                type: "text",
+                left: 50,
+                top: 20,
+                style: {
+                  text: "Back",
+                  fontSize: 18,
+                },
+                onclick: function () {
+                  myChart.setOption(option);
+                },
+              },
+            ],
+          });
+        }
+      });
+
+      if (option && typeof option === "object") {
+        myChart.setOption(option);
+      }
+
+      window.addEventListener("resize", myChart.resize);
+    </script>
   </body>
 </html>
