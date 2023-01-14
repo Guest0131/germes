@@ -1,0 +1,19 @@
+#without-decor {
+    text-decoration: none;
+    font-size: 26px;
+    
+    
+}
+li a:hover {
+    color: white !important;
+    background-color: rgb(50, 52, 67) !important; /* Цвет фона активного пункта */
+    border-radius: 5px;
+   }
+#hermes {
+    padding: 20px;
+    margin-bottom:40px;
+    text-align: center;
+    font-size: 25px;;
+    
+
+}

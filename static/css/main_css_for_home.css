@@ -1,0 +1,8 @@
+#black-theme {
+    background-color: rgb(26, 26, 26)!important;
+    min-height: 100vh;
+}
+body {
+    background-color: rgb(26, 26, 26);
+    
+}

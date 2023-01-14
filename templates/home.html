@@ -18,33 +18,40 @@
     <link rel="stylesheet" href="../static/css/diagram.css" />
     <link rel="stylesheet" href="../static/css/document.css" />
     <link rel="stylesheet" href="../static/css/tasks.css" />
+    <link rel="stylesheet" href="../static/css/main_css_for_home.css"/>
+    <link rel="stylesheet" href="../static/css/menu.css" />
   </head>
-  <body>
-    <div class="container-max-width">
-      <div class="notification is-primary">
+  <body>    
+      <div class="notification is-primary is-fullheight" id="black-theme">
         <div class="columns">
           <!-- Block Menu  [Start]-->
           <div
-            class="column is-one-quarter"
-            style="background-color: rgb(26, 26, 26)"
+            class="column is-one-fifth"
+            id="black-theme"
           >
-            <h3 class="title is-3">Гермес</h3>
+            <h3 class="title is-3" id="hermes"><img style= "margin-right: 25px;" src="../static/images/graph.png">ГЕРМЕС</h3>
             <aside class="menu">
               <ul class="menu-list">
-                <li><a class="is-active">Моя доска</a></li>
-                <li><a>Поиск</a></li>
-                <li><a>Добавить материал</a></li>
-                <li><a>Задачи</a></li>
-                <li><a>Предметы</a></li>
+                <li>
+                      <a id="without-decor" > <img style= "margin-right: 10px;" src="../static/images/menu.png">Моя доска</a>
+                </li>                 
+                    
+                
+                  
+                  
+                <li><a id="without-decor"><img style= "margin-right: 10px;" src="../static/images/search.png">Поиск</a></li>
+                <li><a id="without-decor"><img style= "margin-right: 10px;" src="../static/images/add.png">Добавить материал</a></li>
+                <li><a id="without-decor"><img style= "margin-right: 10px;" src="../static/images/tasks.png">Задачи</a></li>
+                <li><a id="without-decor"><img style= "margin-right: 10px;" src="../static/images/menu.png">Предметы</a></li>
               </ul>
             </aside>
           </div>
           <!-- Block Menu  [End]-->
 
           <!-- Block Work table  [Start]-->
-          <div class="column" style="background-color: rgb(50, 52, 67)">
-            <h3 class="title is-3"></h3>
-            <h3 class="title is-3 is-center">Рабочая доска</h3>
+          <div class="column" style="background-color: rgb(50, 52, 67); padding-left: 40px; padding-right: 40px;">
+
+            <h3 class="title is-3 is-center" style="margin-top: 7%;">Рабочая доска</h3>
 
             <div class="box">
               <h5 class="title is-5">Хочешь гуглить как боженька?</h5>
@@ -266,7 +273,7 @@
               <!-- Block with images for news [End]-->
 
               <h4 class="title is-4">События</h4>
-              
+
               <!-- Block with notification [Start]-->
               <div class="columns">
                 <div class="column">
@@ -343,8 +350,7 @@
           <!-- Block News [End] -->
         </div>
       </div>
-    </div>
-
+ 
     <script src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
     <script>
       var dom = document.getElementById("chart-container-2");
