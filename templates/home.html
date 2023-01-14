@@ -16,6 +16,7 @@
     <link rel="stylesheet" href="../static/css/login.css" />
     <link rel="stylesheet" href="../static/css/diagram.css" />
     <link rel="stylesheet" href="../static/css/document.css" />
+    <link rel="stylesheet" href="../static/css/tasks.css" />
   </head>
   <body>
     <div class="container-max-width">
@@ -63,6 +64,7 @@
                 </div>
               </div>
             </div>
+
             <!-- Block with statisics [Start]-->
             <div class="box">
               <h5 class="title is-5">Статистика за семестр</h5>
@@ -84,14 +86,13 @@
 
             <!-- Block document [Start]-->
             <div class="box">
-              <h5 class="title is-5">Мои документы</h5>
               <div class="columns">
 
                 <!-- Last Left  Block  [Start]-->
                 <div class="column is-half">
-              
+                  <h5 class="title is-5">Мои документы</h5>
                   <!-- Block theme  [Start]-->
-                  <div class="box" id="black-themes-for-box">
+                  <div class="box" id="gray-themes-for-box">
                     <div class="columns">
                       <div class="column">
                       
@@ -116,7 +117,7 @@
                   <!-- Block theme  [End]-->
 
                    <!-- Block theme  [Start]-->
-                   <div class="box" id="black-themes-for-box">
+                   <div class="box" id="gray-themes-for-box">
                     <div class="columns">
                       <div class="column">
                       
@@ -143,15 +144,51 @@
                 <!-- Last Left Block  [End]-->
 
                 <!-- Last Right Block  [Start]-->
-                <div class="column is-half"></div>
-                <!-- Last Right Block  [End]-->
+                <div class="column is-half">
+                  <h5 class="title is-5">Мои задачи</h5>
+                  <div class="columns">
+                    <div class="column">
+                      <div class="box" id="gray-themes-for-box">
+                        <div class="box" id="black-themes-for-box">
+                          
+                         
+                              <span class="icon">
+                                <i class="fas fa-arrow-right"></i>
+                              </span> 
+                              <p> asfasafs</p> 
+                           
+                              <progress class="progress is-link" value="30" max="100">30%</progress>
+                          
+                         
+                         
+                          
+                        </div>
+                        <div class="box" id="black-themes-for-box">
+                          <span class="icon">
+                            <i class="fas fa-arrow-right"></i>
+                          </span>
+                          <p> asfasafs</p>
+                          <progress class="progress is-link" value="70" max="100">70%</progress>
+                        </div>
+                        <div class="box" id="black-themes-for-box">
+                          <span class="icon">
+                            <i class="fas fa-arrow-right"></i>
+                          </span>
+                          <p> asfasafs</p>
+                          <progress class="progress is-link" value="50" max="100">50%</progress>
+                        </div>
 
+                      </div>  
+                    </div>
+                  </div>
+                </div>
+                <!-- Last Right Block  [End]-->
               </div>
             </div>
-          </div>
-          <!-- Block document [End]-->
+            <!-- Block document [End]-->
 
-          <!-- Block Work table  [End]-->
+          </div>
+          <!-- Block Work table [End]-->
 
           <!-- Block  News [START] -->
           <div
@@ -164,6 +201,9 @@
         </div>
       </div>
     </div>
+          
+  
+    
     <script src="https://fastly.jsdelivr.net/npm/echarts@5.4.1/dist/echarts.min.js"></script>
     <script>
       var dom = document.getElementById("chart-container-2");
