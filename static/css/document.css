@@ -1,6 +1,6 @@
 #gray-themes-for-box {
     background-color:rgb(50, 52, 67);
-    margin: 10px 0px 10px 0;
+    margin-bottom: 10px;
 }
 
 #btn-look {
@@ -26,7 +26,6 @@
 #light-text {
     color:#fff;
     font-size: 14px;
-    
 }
 #position-left{
     float: left;
