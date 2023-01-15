@@ -383,7 +383,7 @@
             emphasis: {
               label: {
                 show: true,
-                fontSize: 40,
+                fontSize: 20,
                 fontWeight: "bold",
               },
             },
@@ -391,11 +391,11 @@
               show: false,
             },
             data: [
-              { value: 1048, name: "Search Engine" },
-              { value: 735, name: "Direct" },
-              { value: 580, name: "Email" },
-              { value: 484, name: "Union Ads" },
-              { value: 300, name: "Video Ads" },
+              { value: 1048, name: "HTML" },
+              { value: 735, name: "Python" },
+              { value: 580, name: "NodeJS" },
+              { value: 484, name: "React" },
+              { value: 300, name: "Vue" },
             ],
           },
         ],
@@ -419,7 +419,7 @@
 
       option = {
         xAxis: {
-          data: ["Animals", "Fruits", "Cars"],
+          data: ["2020", "2021", "2022"],
         },
         yAxis: {},
         dataGroupId: "",
@@ -429,16 +429,16 @@
           id: "sales",
           data: [
             {
-              value: 5,
-              groupId: "animals",
+              value: 3,
+              groupId: "2020",
             },
             {
               value: 2,
-              groupId: "fruits",
+              groupId: "2021",
             },
             {
               value: 4,
-              groupId: "cars",
+              groupId: "2022",
             },
           ],
           universalTransition: {
@@ -449,28 +449,26 @@
       };
       const drilldownData = [
         {
-          dataGroupId: "animals",
+          dataGroupId: "2020",
           data: [
-            ["Cats", 4],
-            ["Dogs", 2],
-            ["Cows", 1],
-            ["Sheep", 2],
-            ["Pigs", 1],
+            ["Python", 4],
+            ["Django", 2],
+            ["Flask", 1],
           ],
         },
         {
-          dataGroupId: "fruits",
+          dataGroupId: "2021",
           data: [
-            ["Apples", 4],
-            ["Oranges", 2],
+            ["NoSQL", 4],
+            ["Oracle", 2],
           ],
         },
         {
-          dataGroupId: "cars",
+          dataGroupId: "2022",
           data: [
-            ["Toyota", 4],
-            ["Opel", 2],
-            ["Volkswagen", 2],
+            ["VPN", 4],
+            ["OpenVPN", 2],
+            ["C#", 2],
           ],
         },
       ];
