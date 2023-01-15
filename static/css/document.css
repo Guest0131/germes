@@ -1,37 +1,41 @@
 #gray-themes-for-box {
-    background-color:rgb(50, 52, 67);
+    background-color: rgb(50, 52, 67);
     margin-bottom: 10px;
 }
 
 #btn-look {
-    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);
-    margin: 5px;
-    width: 80px;
-    height: 25px;
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE 51%, #DA22FF 100%);
+    margin-right: 5px;
+    width: 100%;
+    height: 20%;
     text-align: center;
     transition: 0.5s;
     background-size: 200% auto;
-    color: white;            
+    color: white;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.233);
     border-radius: 10px;
-    border-color:rgb(50, 52, 67);
+    border-color: rgb(50, 52, 67);
+    font-size: 10px
 }
 
 #btn-look:hover {
-    background-position: right center; /* change the direction of the change here */
+    background-position: right center;
+    /* change the direction of the change here */
     color: #fff;
     text-decoration: none;
 }
 
 #light-text {
-    color:#fff;
+    color: #fff;
     font-size: 14px;
 }
-#position-left{
+
+#position-left {
     float: left;
 }
+
 .light-small-text {
-    color:#fff !important;
+    color: #fff !important;
     font-size: 10px;
     text-align: left;
     line-height: normal;
