@@ -6,3 +6,24 @@ body {
     background-color: rgb(26, 26, 26);
     
 }
+
+
+#btn-learn {
+    background-image: linear-gradient(to right, #DA22FF 0%, #9733EE  51%, #DA22FF  100%);
+   
+    width: 100%;
+    height: 50px;
+    text-align: center;
+    transition: 0.5s;
+    background-size: 200% auto;
+    color: white;            
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.233);
+    border-radius: 10px;
+    
+}
+
+#btn-learn:hover {
+    background-position: right center; /* change the direction of the change here */
+    color: #fff;
+    text-decoration: none;
+}

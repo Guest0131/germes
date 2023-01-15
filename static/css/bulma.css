@@ -10718,3 +10718,8 @@ label.panel-block:hover {
   padding: 3rem 1.5rem 6rem;
 }
 /*# sourceMappingURL=bulma.css.map */
+.title {  
+  font-family: "Verdana", sans-serif;
+  font-size: 18px;
+  line-height: 21px;
+}
