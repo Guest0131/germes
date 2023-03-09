@@ -1,5 +1,9 @@
-import { Box, IconButton, useTheme } from "@mui/material";
-import { useContext } from "react";
+import { Box, IconButton, useTheme, Typography } from "@mui/material";
+import Popover from '@mui/material/Popover';
+import PopupState, { bindTrigger, bindPopover } from 'material-ui-popup-state';
+
+import { useAccount } from "wagmi";
+import { useContext, useState } from "react";
 import { ColorModeContext, tokens } from "../../theme";
 
 import InputBase from "@mui/material/InputBase";
@@ -10,15 +14,20 @@ import SettingsOutlinedIcon from "@mui/icons-material/SettingsOutlined";
 import NotificationsOutlinedIcon from "@mui/icons-material/NotificationsOutlined";
 import PersonOutlineOutlinedIcon from "@mui/icons-material/PersonOutlineOutlined";
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
+import LogoutIcon from '@mui/icons-material/Logout';
 
 import styled from "@emotion/styled";
 
 const styledBox = styled(Box);
 
-export const TopBar = () => {
+export const TopBar = ({logout}) => {
   const theme = useTheme();
   const colors = tokens(theme.palette.mode);
   const colorMode = useContext(ColorModeContext);
+  const { address } = useAccount();
+
+
+
 
   return (
     <Box display="flex" justifyContent="space-between" p={2}>
@@ -51,8 +60,36 @@ export const TopBar = () => {
         <IconButton>
           <NotificationsOutlinedIcon />
         </IconButton>
-        <IconButton>
-          <PersonOutlineOutlinedIcon />
+
+        <PopupState variant="popover" popupId="demo-popup-popover">
+        {(popupState) => (
+        <div>
+          <IconButton variant="contained" {...bindTrigger(popupState)}>
+            <PersonOutlineOutlinedIcon />
+          </IconButton>
+          <Popover
+            {...bindPopover(popupState)}
+            anchorOrigin={{
+              vertical: 'bottom',
+              horizontal: 'left',
+            }}
+            transformOrigin={{
+              vertical: 'top',
+              horizontal: 'center',
+            }}
+          >
+            <Typography>
+              {address}
+            </Typography>
+            
+          </Popover>
+        </div>
+      )}
+    </PopupState>
+
+
+        <IconButton onClick={logout}>
+          <LogoutIcon />
         </IconButton>
       </Box>
     </Box>

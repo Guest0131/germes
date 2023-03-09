@@ -3,6 +3,7 @@ import "react-pro-sidebar/dist/css/styles.css";
 
 import { Box, IconButton, useTheme, Typography } from "@mui/material";
 import { Link } from "react-router-dom";
+import { useAccount } from "wagmi";
 import { useContext, useState } from "react";
 import { tokens } from "../../theme";
 
@@ -12,6 +13,7 @@ import MenuOutlinedIcon from "@mui/icons-material/MenuOutlined";
 import AddchartOutlinedIcon from '@mui/icons-material/AddchartOutlined';
 import ContentPasteSearchOutlinedIcon from '@mui/icons-material/ContentPasteSearchOutlined';
 import DashboardOutlinedIcon from '@mui/icons-material/DashboardOutlined';
+
 
 const Item = ({ title, to, icon, selected, setSelected }) => {
   const theme = useTheme();
@@ -37,6 +39,7 @@ export const SideBar = () => {
   const colors = tokens(theme.palette.mode);
   const [isCollapsed, setIsCollapsed] = useState(false);
   const [selected, setSelected] = useState("Dashboard");
+  const { address } = useAccount();
 
   return (
     <Box
@@ -103,7 +106,7 @@ export const SideBar = () => {
                   >
                     Admin
                   </Typography>
-                  <Typography>VIP</Typography>
+                  <Typography>{address}</Typography>
                 </Box>
               </Box>
             )}

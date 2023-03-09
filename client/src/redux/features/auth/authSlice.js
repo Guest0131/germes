@@ -34,12 +34,15 @@ export const authSlice = createSlice({
     reducers: {
         logout: (state) => {
             state.user = null
-            state.token = null
             state.isLoading = false
             state.status = null
         },
 
-
+        setAuthorize: (state, userdata) => {
+            state.user = null
+            state.isLoading = false
+            state.status = null
+        }
     },
     extraReducers: {
 
