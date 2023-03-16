@@ -1,8 +1,6 @@
 import {
-  Typography,
   Box,
   useTheme,
-  Container,
   IconButton,
 } from "@mui/material";
 import InputBase from "@mui/material/InputBase";
@@ -12,7 +10,7 @@ import { ResultBox } from "./ResultBox";
 import { tokens } from "../../theme.js";
 
 import { Header } from "../../components/Header.js";
-import { getLinks } from "../../redux/features/rest/restSlice.js";
+import { getLinks } from "../../redux/features/rest/linksSlice.js";
 
 import SearchOutlinedIcon from "@mui/icons-material/SearchOutlined";
 
@@ -21,14 +19,12 @@ export const CreateGraph = () => {
   const colors = tokens(theme.palette.mode);
 
   const [query, setQuery] = useState("");
-  const restData = useSelector(state => state.rest)
   const dispatch = useDispatch();
 
   const handleSubmit = () => {
     try {
-        dispatch(getLinks({stringQuery : query}))
+        dispatch(getLinks(query))
         setQuery("")
-        console.log(restData)
     } catch (e) {
         console.log(e)
     }

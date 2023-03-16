@@ -1,5 +1,5 @@
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit'
-import { restInstance } from '../../../utils/axios'
+import axios from '../../../utils/axios'
 
 const initialState = {
     data: [],
@@ -7,16 +7,17 @@ const initialState = {
     status: null,
 }
 
-// Reducer example
-export const getLinks = createAsyncThunk(
-    '/api/v1.0/google/get_links',
-    async ({ stringQuery }) => {
+// Get LINKS
+export const parserHabr = createAsyncThunk(
+    '/api/parsers/google',
+    async ({ url }) => {
         try {
-            const { data } = await restInstance.post('/api/v1.0/google/get_links', {
-                query : stringQuery
+            const { data } = await axios.post('/api/parsers/habr', {
+                url : url
             }, {
                 timeout: 0
             })
+
             return data
         } catch (error) {
             console.log(error)
@@ -32,22 +33,21 @@ export const restSlice = createSlice({
     reducers: {},
     extraReducers: {
 
-        },
-        // /todo/api/v1.0/tasks/
-        [getLinks.pending]: (state) => {
+        // /api/parsers/google
+        [parserHabr.pending]: (state) => {
             state.isLoading = true
             state.status = null
         },
-        [getLinks.fulfilled]: (state, action) => {
+        [parserHabr.fulfilled]: (state, action) => {
             state.isLoading = false
             state.data = action.payload.message
- 
         },
-        [getLinks.rejectWithValue]: (state, action) => {
+        [parserHabr.rejectWithValue]: (state, action) => {
             state.status = action.payload.message
             state.isLoading = false
-
         }
+
+    },
     })
 
 
